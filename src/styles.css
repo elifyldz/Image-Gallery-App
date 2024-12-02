@@ -1,0 +1,60 @@
+/* Tüm elemanlar için genel stiller */
+* {
+    box-sizing: border-box; /* Padding ve border, elemanın toplam boyutuna dahil edilir */
+    margin: 0; 
+    padding: 0; /* Varsayılan iç boşlukları kenar boşluklarını sıfırlanır */
+}
+
+/* Ana uygulama kapsayıcısı */
+.App {
+    width: 100%; 
+
+    min-height: 100vh; /* Yüksekliği ekranın tamamı kadar olur */
+    background: #e9cdeb; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; /* Elemanlar dikey olarak sıralanır */
+}
+
+
+
+/* Seçili resmin */
+.container {
+    margin: auto; /* Kapsayıcıyı yatay ve dikeyde ortalar */
+    width: 100%; 
+    max-width: 540px; 
+}
+
+
+/* Tüm img elemanları için genel stiller */
+img {
+    display: block; /* Görüntü elemanlarını satır bazlı blok gibi davranacak şekilde ayarlar */
+    cursor: pointer; /* Fare imleci*/
+} 
+
+
+/* Seçili resmin stili */
+.container .selected {
+    width: 500px; 
+    height: 500px; 
+    margin: 0 auto; 
+    border: 3px solid #e886ed; 
+}
+
+/* Küçük resimlerin yer aldığı kapsayıcı */
+.imgContainer {
+    width: 50%; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; /* Küçük resimler satır dolduğunda bir sonraki satıra taşınır */
+    margin-bottom: 70px; 
+    column-gap: 30px; 
+}
+
+/* Küçük resimlerin stili */
+.App .imgContainer img {
+    width: 100px; 
+    height: 100px; 
+    margin: 5px 0; /* Üst ve alt tarafa 5px boşluk eklenir */
+}
